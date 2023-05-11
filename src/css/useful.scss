@@ -1,0 +1,30 @@
+.useful {
+    padding: 95px 0;
+    &__title {
+        font-size: 35px;
+        line-height: 96.5%;
+        color: #0F0F10;
+        margin-bottom: 70px;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        &-img {
+            width: 100%;
+        }
+        &-card {
+            width: calc(33.33333% - 13.33333px);
+        }
+        &-title {
+            font-size: 20px;
+            line-height: 96.5%;
+            color: #0F0F10;
+            margin: 40px 0 12px;
+        }
+        &-subtitle {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
