@@ -169,12 +169,13 @@ addForm.addEventListener('submit', (e)=>{
         })
     } else {
         // отправляем запрос в БД на запись (Post) нового объекта, события e имеет target, где у каждого индекса формы из свое значение (value)
-        fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars.json', {
+        fetch('http://localhost:3000/cars/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': "application/json"
             },
+            
             body: JSON.stringify({
                 
                 "title": e.target[0].value,
@@ -191,8 +192,6 @@ addForm.addEventListener('submit', (e)=>{
         })
     }
 
-    
-   
 });
 
 

@@ -4,7 +4,7 @@ let addBtn = document.querySelector('.useful-info-top-btn');
 let addForm = document.querySelector('.catalog__form');
 
 const getAllInfo = (number) => {
-    fetch('http://localhost:3000/info')
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/info.json')
     .then((response)=> response.json())
     .then((info) => {
         info.slice().reverse().filter((item, i)=> i > number * 5 - 6 && i < number * 5).forEach((item, i)=>{
