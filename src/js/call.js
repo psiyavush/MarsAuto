@@ -12,7 +12,7 @@ callBtn.forEach((btn)=> {
 addForm.addEventListener('submit', (e)=> {
     e.preventDefault();
     
-    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/call.json', {
+    fetch('http://localhost:3000/call', {
         method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -29,7 +29,7 @@ addForm.addEventListener('submit', (e)=> {
         sent.style.display = 'flex';
         setTimeout(function () {
             sent.style.display = 'none';
-        }, 3000);
+        }, 4000);
         e.target[0].value = '';
         e.target[1].value = '';
         e.target[2].value = '';
