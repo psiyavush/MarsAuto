@@ -60,8 +60,8 @@
                 <p class="home__subtitle">Узнайте, как использовать самый экологичный <br> автомобиль в повседневной жизни</p>
 
                 <div class="home__btns">
-                    <button class="home__btn-green">Тест драйв</button>
-                    <button class="home__btn-red">Аренда электромобиля</button>
+                    <button class="home__btn-green test-btn">Тест драйв</button>
+                    <button class="home__btn-red rent-btn">Аренда электромобиля</button>
                 </div>
 
                 <ul class="home__info">
@@ -297,11 +297,89 @@
             <p class="overlay__call-subtitle">Отправьте нам свой номер телефона и мы <br>Вам позвоним!</p>
             <form action="" class="overlay__call-form" autocomplete="off">
                 <input required type="text" placeholder="Имя" class="overlay__call-input">
-                <input required type="text" placeholder="Телефон" class="overlay__call-input">
+                <input required type="tel" autocomplete="on" placeholder="Телефон" class="overlay__call-input">
                 <div class="overlay__call-agreement">
                     <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
                 </div>
                 <button type="submit" class="header__btn overlay__call-btn" type="button">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="overlay__test">
+        <div class="overlay__test-img">
+            <img src="./src/images/agefis-vKvUcdyaUhc-unsplash 1.png" alt="Запись на тест драйв">
+        </div>
+        <div class="overlay__test-form">
+            <h3 class="overlay__test-title">Запись на тест драйв</h3>
+            
+            <form action="" class="overlay__test-forms" autocomplete="off">
+                <input required type="text" placeholder="Имя" class="overlay__call-input">
+                <input required type="tel" autocomplete="on" placeholder="Телефон" class="overlay__call-input">
+                <div class="overlay__test-select">
+                    <div class="overlay__test-select-day">
+                        <label for="test-data">Дата</label>
+                        <select name="data" required="required" id="test-data">
+                            <option value="">Выберите дату</option>
+                            <option value="1" class="data-1"></option>
+                            <option value="2" class="data-2"></option>
+                            <option value="3" class="data-3"></option>
+                            <option value="4" class="data-4"></option>
+                            <option value="5" class="data-5"></option>
+                            <option value="6" class="data-6"></option>
+                            <option value="7" class="data-7"></option>
+                        </select>
+                    </div>
+                    <div class="overlay__test-select-time">
+                        <label for="test-time">Время</label>
+                        <select name="time" required="required" id="test-time">
+                            <option value="">Выберите время</option>
+                            <option value="1" >10:00</option>
+                            <option value="2" >11:00</option>
+                            <option value="3" >12:00</option>
+                            <option value="4" >13:00</option>
+                            <option value="5" >14:00</option>
+                            <option value="6" >15:00</option>
+                            <option value="7" >16:00</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="overlay__call-agreement">
+                    <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
+                </div>
+                <button type="submit" class="header__btn overlay__test-btn" type="button">Записаться</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="overlay__rent">
+        <div class="overlay__test-img">
+            <img src="./src/images/rent.png" alt="Аренда авто" height="523px">
+        </div>
+        <div class="overlay__test-form">
+            <h3 class="overlay__test-title">Аренда авто</h3>
+            
+            <form action="" class="overlay__rent-forms" autocomplete="off">
+                <input required type="text" placeholder="ФИО" class="overlay__call-input">
+                <input required type="tel" autocomplete="on" placeholder="Телефон" class="overlay__call-input">
+                <div class="overlay__test-select">
+                    <div class="overlay__test-select-day">
+                        <label for="rent-data">Дата</label>
+                        <input type="date" id="rent-date" name="app-date" required="required"/>
+                    </div>
+                    <div class="overlay__test-select-time">
+                        <label for="rent-time">Время</label>
+                        <input type="time" id="rent-time" name="app-time" required="required" />
+                    </div>
+                </div>
+                
+                <div class="overlay__call-agreement">
+                    <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
+                </div>
+                <button type="submit" class="header__btn overlay__test-btn" type="button">Записаться</button>
             </form>
 
         </div>
@@ -318,7 +396,7 @@
             С вами свяжутся в ближайшее время</p>
        </div>
     </div>
-
+<script src="./src/js/moment.min.js"></script>
 <script src="./src/js/cars.js"></script>
 <script src="./src/js/call.js"></script>
 
