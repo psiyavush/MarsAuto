@@ -34,7 +34,7 @@
                             <path d="M12.8766 9.1894C12.0195 9.1894 11.1779 9.05534 10.3804 8.79178C9.98958 8.65849 9.50917 8.78077 9.27066 9.02573L7.6965 10.2141C5.87092 9.23956 4.7464 8.11541 3.78521 6.30354L4.93857 4.77039C5.23822 4.47114 5.3457 4.03401 5.21693 3.62385C4.95224 2.82213 4.81779 1.98093 4.81779 1.12343C4.81782 0.503964 4.31386 0 3.69443 0H1.12339C0.503964 0 0 0.503964 0 1.12339C0 8.22365 5.77638 14 12.8766 14C13.4961 14 14 13.496 14 12.8766V10.3127C14 9.69336 13.496 9.1894 12.8766 9.1894Z" fill="white"/>
                             </svg> +7 812 418 04 92</a></li>
                     </ul>
-                    <button class="header__btn" type="button">Заказать звонок</button>
+                    <button class="header__btn call" type="button">Заказать звонок</button>
                 </div>
             </nav>
         
@@ -282,12 +282,45 @@
                             <path d="M12.8766 9.1894C12.0195 9.1894 11.1779 9.05534 10.3804 8.79178C9.98958 8.65849 9.50917 8.78077 9.27066 9.02573L7.6965 10.2141C5.87092 9.23956 4.7464 8.11541 3.78521 6.30354L4.93857 4.77039C5.23822 4.47114 5.3457 4.03401 5.21693 3.62385C4.95224 2.82213 4.81779 1.98093 4.81779 1.12343C4.81782 0.503964 4.31386 0 3.69443 0H1.12339C0.503964 0 0 0.503964 0 1.12339C0 8.22365 5.77638 14 12.8766 14C13.4961 14 14 13.496 14 12.8766V10.3127C14 9.69336 13.496 9.1894 12.8766 9.1894Z" fill="white"/>
                             </svg> +7 812 418 04 92</a></li>
                     </ul>
-                    <button class="header__btn" type="button">Заказать звонок</button>
+                    <button class="header__btn call" type="button">Заказать звонок</button>
                 </div>
             </nav>
         </div>
     </footer>
 
+    <div class="overlay__call">
+        <div class="overlay__call-img">
+            <img src="./src/images/jim-reardan-gyslVZcsNK4-unsplash 1.png" alt="Заказать звонок">
+        </div>
+        <div class="overlay__call-form">
+            <h3 class="overlay__call-title">Заказать обратный звонок</h3>
+            <p class="overlay__call-subtitle">Отправьте нам свой номер телефона и мы <br>Вам позвоним!</p>
+            <form action="" class="overlay__call-form" autocomplete="off">
+                <input required type="text" placeholder="Имя" class="overlay__call-input">
+                <input required type="text" placeholder="Телефон" class="overlay__call-input">
+                <div class="overlay__call-agreement">
+                    <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
+                </div>
+                <button type="submit" class="header__btn overlay__call-btn" type="button">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="sent">
+       <div class="sent-inner">
+        <p>
+            <svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M49 0C21.9803 0 0 21.9803 0 49C0 76.0197 21.9803 98 49 98C76.0197 98 98 76.0197 98 49C98 21.9803 76.0197 0 49 0ZM73.835 38.6162L47.293 65.1574C46.4968 65.9537 45.4515 66.3544 44.4062 66.3544C43.361 66.3544 42.3157 65.9537 41.5195 65.1574L28.2489 51.8868C26.6518 50.2905 26.6518 47.7095 28.2489 46.1132C29.8452 44.5162 32.4254 44.5162 34.0225 46.1132L44.4062 56.497L68.0614 32.8426C69.6577 31.2456 72.2379 31.2456 73.835 32.8426C75.4313 34.4389 75.4313 37.0192 73.835 38.6162Z" fill="#18DE6E"/>
+            </svg>
+        </p>
+        <p class="sent__text">Отправлено! <br>
+            С вами свяжутся в ближайшее время</p>
+       </div>
+    </div>
+
 <script src="./src/js/cars.js"></script>
+<script src="./src/js/call.js"></script>
+
 </body>
 </html>

@@ -37,6 +37,13 @@
   justify-content: space-between;
   padding: 15px 0;
 }
+.header__under-list a {
+  color: #0F0F10;
+  text-decoration: none;
+}
+.header__under-list a:visited {
+  color: #E31E24;
+}
 
 .home {
   padding: 211px 0 80px;
@@ -98,6 +105,34 @@
   justify-content: space-between;
   column-gap: 20px;
   color: #ffffff;
+}
+
+.sent {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.sent-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 85px 40px;
+  justify-content: center;
+  align-items: center;
+  width: 532px;
+  height: 375px;
+  background: #FFFFFF;
+  gap: 30px;
+}
+.sent__text {
+  font-size: 25px;
+  line-height: 149.5%;
+  text-align: center;
+  color: #0F0F10;
 }
 
 .car {
@@ -277,6 +312,13 @@
   text-align: center;
   color: #FFFFFF;
 }
+.footer__item a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer__item a:visited {
+  color: #E31E24;
+}
 .footer__nav {
   display: flex;
   justify-content: space-between;
@@ -344,6 +386,62 @@
   top: 0;
   left: 0;
   display: none;
+}
+.overlay__call {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.overlay__call-img {
+  height: 473px;
+}
+.overlay__call-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 476px;
+  background: #FFFFFF;
+  height: 473px;
+}
+.overlay__call-title {
+  font-size: 25px;
+  line-height: 96.5%;
+  color: #0F0F10;
+  margin: 80px 75px 0 75px;
+}
+.overlay__call-subtitle {
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #0F0F10;
+  margin-bottom: 0;
+}
+.overlay__call-input {
+  background: #FFFFFF;
+  box-shadow: 0px 5px 48px rgba(49, 47, 47, 0.1);
+  border-radius: 43px;
+  width: 316px;
+  height: 52px;
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.overlay__call-agreement {
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #0F0F10;
+  margin-bottom: 12px;
+}
+.overlay__call-btn {
+  width: 316px;
+  height: 52px;
 }
 
 .popup {

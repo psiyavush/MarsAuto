@@ -36,5 +36,12 @@
         display: flex;
         justify-content: space-between;
         padding: 15px 0;
+        & a {
+            color: #0F0F10;
+            text-decoration: none;
+        }
+        & a:visited{
+            color: #E31E24;
+        }
     }
 }

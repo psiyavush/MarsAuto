@@ -209,7 +209,6 @@ overlay.addEventListener('click', (e)=> {
     // создаем условие, чтобы нажатие было в блоке "overlay", но не затрагивало область других блоков
     if(e.target.classList.contains('overlay')) {
         overlay.style.display = 'none';
-        location.reload()
     }
 });
 

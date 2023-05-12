@@ -11,6 +11,13 @@
         line-height: 18px;
         text-align: center;
         color: #FFFFFF;
+        & a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        & a:visited{
+            color: #E31E24;
+        }
     }
     &__nav {
         display: flex;
