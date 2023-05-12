@@ -29,7 +29,7 @@ addForm.addEventListener('submit', (e)=> {
         sent.style.display = 'flex';
         setTimeout(function () {
             sent.style.display = 'none';
-        }, 5000);
+        }, 3000);
         e.target[0].value = '';
         e.target[1].value = '';
         e.target[2].value = '';
