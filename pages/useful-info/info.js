@@ -14,7 +14,7 @@ const getAllInfo = (number) => {
             <div class="useful-info__content-right">
                 <p class="useful-info__content-title">${item.title}</p>
                 <p class="useful-info__content-info">${item.description}</p>
-                <button type="button" class="useful-info__content-btn" data-id="${item.id}">Подробнее</button>
+                <button type="button" onclick="location.href='../article/index.html?id=${item.id}'" class="useful-info__content-btn" data-id="${item.id}">Подробнее</button>
                 <button type="button" class="useful-info__content-delete" data-id="${item.id}">Удалить</button>
                 <button type="button" class="useful-info__content-update" data-id="${item.id}">Изменить</button>
             </div>

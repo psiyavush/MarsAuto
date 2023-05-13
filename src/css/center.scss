@@ -66,3 +66,37 @@
         }
     }
 }
+
+.overlay__center{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    display: none;
+    &-img{
+        height: 473px;
+    }
+    &-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 476px;
+        background: #FFFFFF;
+        height: 473px;
+        gap: 38px;
+    }
+    &-forms {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    &-btn {
+        width: 316px;
+        height: 52px;
+    }
+}

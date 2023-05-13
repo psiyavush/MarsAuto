@@ -9,11 +9,11 @@ let overlay = document.querySelector('.overlay')
 
 
 // Делаем запрос в функции на получения списка авто из БД и выводим её
-const getAllCars = () => {
+const getAllCars = (number) => {
     fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars.json')
     .then((response) => response.json())
     .then((cars) => {
-        cars.forEach((item) => {
+        cars.slice().reverse().filter((item, i)=> i > number * 15 - 16 && i < number * 15).forEach((item, i) => {
         catalogRow.innerHTML += `
         <div class="car__content-card">
                         <img src="${item.image.startsWith('https') ? item.image : "../../"+item.image}" class="car__content-img" alt="${item.title}">
@@ -90,7 +90,73 @@ const getAllCars = () => {
                         </div>
         </div>`
         
-        });
+        })
+        if(cars.length > 15){
+            let ul = document.createElement('ul')
+            ul.classList.add('useful-info-list')
+            let arrow = document.createElement('span')
+            let arrow2 = document.createElement('span')
+            arrow.classList.add('arrow-prev')
+            arrow2.classList.add('arrow-next')
+            arrow.textContent = '<'
+            arrow2.textContent = '>'
+            // следующие функции - моё улучшение функционала и макета
+            let first = document.createElement('span')
+            let last = document.createElement('span')
+            first.classList.add('arrow-first')
+            last.classList.add('arrow-last')
+            first.textContent = '<<'
+            last.textContent = '>>'
+            // 
+
+            for(let x=1; x <= Math.ceil(cars.length / 15); x++ ) {
+                ul.innerHTML +=`
+                <li style="cursor: pointer; display: ${x===number || x+1===number || x-1===number ? 'flex' : number===1 && x ===3 || number===Math.ceil(cars.length / 15) && x===Math.ceil(cars.length / 15)-2 ? 'flex' : 'none' }" class="useful-info-item ${x===number ? 'active' : 'none'}" data-id="${x}">${x}</li>
+                `
+            } 
+
+            if(number < Math.ceil(cars.length / 15)-1){
+                ul.append(arrow2)
+                ul.append(last)
+                arrow2.addEventListener('click', ()=>{
+                    document.querySelector('.useful-info-list').innerHTML=''
+                    catalogRow.innerHTML=''
+                    getAllCars(number+1);
+                })
+
+                last.addEventListener('click', ()=>{
+                    document.querySelector('.useful-info-list').innerHTML=''
+                    catalogRow.innerHTML=''
+                    getAllCars(Math.ceil(cars.length / 15));
+                })
+            }
+                    
+            if (number > 2){
+                ul.prepend(arrow)
+                ul.prepend(first)
+                arrow.addEventListener('click', ()=>{
+                    document.querySelector('.useful-info-list').innerHTML=''
+                    catalogRow.innerHTML=''
+                    getAllCars(number-1);
+                })
+
+                first.addEventListener('click', ()=>{
+                    document.querySelector('.useful-info-list').innerHTML=''
+                    catalogRow.innerHTML=''
+                    getAllCars(1);
+                })
+            }
+
+            catalogRow.after(ul)
+        }
+        let allLi = document.querySelectorAll('.useful-info-item')
+        allLi.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                document.querySelector('.useful-info-list').innerHTML=''
+                catalogRow.innerHTML=''
+                getAllCars(+item.dataset.id);
+            })
+        })
         
         // получаем кнопки изменить
         let updateBtn = document.querySelectorAll('.car__btn-update');
@@ -133,7 +199,7 @@ const getAllCars = () => {
                     // очищаем элемент, где выводим БД 
                     catalogRow.innerHTML = '';
                     // снова заполняем элемент
-                    getAllCars()
+                    getAllCars(1)
                 })
             })
         })
@@ -141,7 +207,7 @@ const getAllCars = () => {
 };
 
 // Вызываем функцию
-getAllCars();
+getAllCars(1);
 
 // На событие отправки формы (submit) вызываем callback функцию, которое принимает событие e (Event)
 addForm.addEventListener('submit', (e)=>{
@@ -209,8 +275,7 @@ overlay.addEventListener('click', (e)=> {
     // создаем условие, чтобы нажатие было в блоке "overlay", но не затрагивало область других блоков
     if(e.target.classList.contains('overlay')) {
         overlay.style.display = 'none';
+        location.reload()
     }
 });
-
-
 

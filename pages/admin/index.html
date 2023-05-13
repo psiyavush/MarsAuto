@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель Администратора</title>
+    <style>
+        h1{
+            font-size: 32px;
+        }
+        h2{
+            font-size: 24px;
+        }
+        .informer-table {
+            font-size: 18px;
+            background-color: #626694;
+            color: #fff;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+        }
+
+        .informer-table td {
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+
+        .informer-table td[colspan] {
+            text-align: center;
+            background-color: #3d9fc5;
+        }
+        .informer {
+            padding-left: 100px;
+        }
+        .call{
+            width: 400px;
+        }
+        .test, .rent{
+            width: 800px;
+        }
+        .question, .power {
+            width: 700px;
+        }
+
+    </style>
+</head>
+<body>
+   <main>
+    <section class="informer">
+        <h1>Вывод информации из сообщений пользователей</h1>
+        
+        <div class="informer-call">
+            
+            <table class="informer-table call">
+                <tr><td colspan="3"><h2>Позвонить</h2></td></tr>
+                <tr style="text-align: center; font-weight: bold;">
+                    <td>№</td>
+                    <td>Имя</td>
+                    <td>Телефон</td>
+                </tr>
+            </table>
+        </div>
+        <div class="informer-test">
+            <table class="informer-table test">
+                <tr><td colspan="5"><h2>Тест Драйв</h2></td></tr>
+                <tr style="text-align: center; font-weight: bold;">
+                    <td>№</td>
+                    <td>Имя</td>
+                    <td>Телефон</td>
+                    <td>Дата</td>
+                    <td>Время</td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="informer-rent">
+            <table class="informer-table rent">
+                <tr><td colspan="5"><h2>Аренда</h2></td></tr>
+                <tr style="text-align: center; font-weight: bold;">
+                    <td>№</td>
+                    <td>Имя</td>
+                    <td>Телефон</td>
+                    <td>Дата</td>
+                    <td>Время</td>
+                </tr>
+            </table>
+        </div>
+        <div class="informer-question">
+            <table class="informer-table question">
+                <tr><td colspan="4"><h2>Вопросы</h2></td></tr>
+                <tr style="text-align: center; font-weight: bold;">
+                    <td>№</td>
+                    <td>Имя</td>
+                    <td>Телефон</td>
+                    <td>Вопрос</td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="informer-power">
+            <table class="informer-table power">
+                <tr><td colspan="4"><h2>Где открыть следующую станцию подзарядки?</h2></td></tr>
+                <tr style="text-align: center; font-weight: bold;">
+                    <td>№</td>
+                    <td>Имя</td>
+                    <td>Почта</td>
+                    <td>Место</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+   </main> 
+</body>
+<script src="./admin.js"></script>
+</html>

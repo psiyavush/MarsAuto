@@ -339,6 +339,32 @@
         </div>
     </div>
 
+    <div class="overlay__center">
+        <div class="overlay__center-img">
+            <img src="../../src/images/question.png" alt="Запись на тест драйв" height="473px" width="367px">
+        </div>
+        <div class="overlay__center-form">
+            <div class="map-module-form-text" style="text-align: center;">
+                <h3 class="map-module-title">Задать вопрос</h3>
+                <p class="map-module-subtitle">Если Вы не нашли ответ на вопрос, заполните форму</p>
+            </div>
+            
+            <form action="" class="overlay__center-forms" autocomplete="off">
+                <input required type="text" placeholder="Имя" class="map-module-input" style="text-align: center;">
+                <input required type="tel" autocomplete="on" placeholder="Телефон" class="map-module-input" style="text-align: center;" >
+
+                <textarea name="details"  placeholder="Ваш вопрос" style="text-align: center;"></textarea>
+
+                
+                <div class="map-module-agreement">
+                    <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
+                </div>
+                <button type="submit" class="header__btn overlay__center-btn" type="button">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
     <div class="sent">
        <div class="sent-inner">
         <p>
@@ -350,7 +376,8 @@
             С вами свяжутся в ближайшее время</p>
        </div>
     </div>
-    <script src="./center.js"></script>
+    
     <script src="../catalog/call.js"></script>
+    <script src="./center.js"></script>
 </body>
 </html>
