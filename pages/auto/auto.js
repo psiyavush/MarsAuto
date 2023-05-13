@@ -1,6 +1,7 @@
 // получение id из url и вывод соответствующих данных
 
 let article = document.getElementById('article');
+let headTitle = document.querySelector('.head-title')
 
 function getUrlParam() {
     let query = window.location.search.substring(1);
@@ -66,6 +67,7 @@ fetch(`https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars/${g
     <p>Хорошая комплектация: кожаный салон, Подогревы сидений передних, климат контроль, бесключевой доступ, центральный замок, электро стекла и электро зеркала, складывания зеркал, датчик света и дождя, литые диски R19, порт быстрой зарядки CHADEMO, камера заднего вида, автопарковка, круиз контроль, заводская сигнализация, ABS и др. опции.</p>
 </div>
 `
+    headTitle.textContent = `${item.title} | MarsAuto`;
 });
 
 // Модальное окно "Заказать звонок" и отправка в базу данных

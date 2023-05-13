@@ -60,49 +60,27 @@
         </section>
 
         <section class="container">
-            <div class="map-modul">
-                <div class="map-modul-img">
-                    <img src="./src/images/agefis-vKvUcdyaUhc-unsplash 1.png" alt="Запись на тест драйв">
+            <div class="map-module">
+                <div class="map-module-img">
+                    <img src="../../src/images/image_810xs 1.png" alt="Запись на тест драйв">
                 </div>
-                <div class="map-modul-form">
-                    <h3 class="map-modul-title">Запись на тест драйв</h3>
+                <div class="map-module-form">
+                    <div class="map-module-form-text">
+                        <h3 class="map-module-title">Где открыть следующую станцию подзарядки?</h3>
+                        <p class="map-module-subtitle">Есть идеи, напишите нам.</p>
+                    </div>
                     
-                    <form action="" class="overlay__test-forms" autocomplete="off">
-                        <input required type="text" placeholder="Имя" class="overlay__call-input">
-                        <input required type="tel" autocomplete="on" placeholder="Телефон" class="overlay__call-input">
-                        <div class="overlay__test-select">
-                            <div class="overlay__test-select-day">
-                                <label for="test-data">Дата</label>
-                                <select name="data" required="required" id="test-data">
-                                    <option value="">Выберите дату</option>
-                                    <option value="1" class="data-1"></option>
-                                    <option value="2" class="data-2"></option>
-                                    <option value="3" class="data-3"></option>
-                                    <option value="4" class="data-4"></option>
-                                    <option value="5" class="data-5"></option>
-                                    <option value="6" class="data-6"></option>
-                                    <option value="7" class="data-7"></option>
-                                </select>
-                            </div>
-                            <div class="overlay__test-select-time">
-                                <label for="test-time">Время</label>
-                                <select name="time" required="required" id="test-time">
-                                    <option value="">Выберите время</option>
-                                    <option value="1" >10:00</option>
-                                    <option value="2" >11:00</option>
-                                    <option value="3" >12:00</option>
-                                    <option value="4" >13:00</option>
-                                    <option value="5" >14:00</option>
-                                    <option value="6" >15:00</option>
-                                    <option value="7" >16:00</option>
-                                </select>
-                            </div>
-                        </div>
+                    <form action="" class="map-module-forms" autocomplete="off">
+                        <input required type="text" placeholder="Имя" class="map-module-input">
+                        <input required type="email" autocomplete="on" placeholder="Почта" class="map-module-input">
+
+                        <textarea name="details"  placeholder="Место для новой зарядной станции"></textarea>
+
                         
-                        <div class="overlay__call-agreement">
+                        <div class="map-module-agreement">
                             <input required type="checkbox" name ="agreement"> <label for="agreement">Я принимаю пользовательское соглашение</label>
                         </div>
-                        <button type="submit" class="header__btn overlay__test-btn" type="button">Записаться</button>
+                        <button type="submit" class="header__btn map-module-btn" type="button">Отправить</button>
                     </form>
         
                 </div>
@@ -117,8 +95,8 @@
                 <li class="footer__item"><a href="../../index.html">Главная страница</a></li>
                 <li class="footer__item"><a href="../catalog/index.html">Каталог автомобилей</a></li>
                 <li class="footer__item">Сеть зарядных станций</li>
-                <li class="footer__item">Вопрос-ответ</li>
-                <li class="footer__item">Полезная информация</li>
+                <li class="footer__item"><a href="../center/index.html">Вопрос-ответ</a></li>
+                <li class="footer__item"><a href="../useful-info/index.html">Полезная информация</a></li>
             </ul>
 
             <nav class="footer__nav">

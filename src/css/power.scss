@@ -1,0 +1,60 @@
+textarea[name="details"] { 
+    resize: none;
+    height: 112px;
+    width: 454px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 48px rgba(49, 47, 47, 0.1);
+    border: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 18px;
+    
+}
+
+.map-module{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    &-form {
+        padding: 80px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+       
+    }
+    &-title{
+        font-size: 20px;
+        line-height: 96.5%;
+        color: #0F0F10;
+        margin-bottom: 10px;
+    }
+    &-subtitle{
+        font-size: 15px;
+        line-height: 18px;
+        color: #0F0F10;
+    }
+    &-forms {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+    &-input {
+        box-shadow: 0px 5px 48px rgba(49, 47, 47, 0.1);
+        border-radius: 43px;
+        width: 316px;
+        height: 52px;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+        line-height: 18px;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+    &-btn {
+        width: 454px;
+        height: 52px;
+    }
+}

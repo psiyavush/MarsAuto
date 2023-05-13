@@ -30,9 +30,7 @@ addFormCall.addEventListener('submit', (e)=> {
         setTimeout(function () {
             sent.style.display = 'none';
         }, 4000);
-        e.target[0].value = '';
-        e.target[1].value = '';
-        e.target[2].value = '';
+        e.target.reset()
         
     })
     

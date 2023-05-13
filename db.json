@@ -219,5 +219,19 @@
       "date": "2023-05-12",
       "time": "10:00"
     }
+  ],
+  "power": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "email": "mail@mail.com",
+      "text": "ул. Шкапина"
+    },
+    {
+      "name": "Tom Cruze",
+      "email": "gruze@mail.ru",
+      "text": "New-York",
+      "id": 2
+    }
   ]
 }
