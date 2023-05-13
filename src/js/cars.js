@@ -74,7 +74,7 @@ const getAllCars = () => {
                                 </li>
                             </ul>   
 
-                            <button class="car__content-btn">Подробнее</button>
+                            <button class="car__content-btn" onclick="location.href='./pages/auto/index.html?id=${item.id}'">Подробнее</button>
                         </div>
                     </div>`
         

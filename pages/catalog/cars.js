@@ -82,7 +82,7 @@ const getAllCars = () => {
                                 </li>
                             </ul>   
 
-                            <button class="car__content-btn" type="button">Подробнее</button>
+                            <button class="car__content-btn" onclick="location.href='../auto/index.html?id=${item.id}'">Подробнее</button>
                             <div class="btn-admin">
                             <button class="car__btn-delete" data-id="${item.id}"  type="button">Удалить</button>
                             <button class="car__btn-update" data-id="${item.id}"  type="button">Изменить</button>
