@@ -1,1 +1,81 @@
-"use strict";fetch("https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/call.json").then(function(t){return t.json()}).then(function(t){t.forEach(function(t,n){var e=document.createElement("tr");e.innerHTML="\n            <td>".concat(n+1,"</td>\n            <td>").concat(t.name,"</td>\n            <td>").concat(t.phone,"</td>\n        "),document.querySelector(".call").appendChild(e)})}),fetch("https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app//test.json").then(function(t){return t.json()}).then(function(t){t.forEach(function(t,n){var e=document.createElement("tr");e.innerHTML="\n            <td>".concat(n+1,"</td>\n            <td>").concat(t.name,"</td>\n            <td>").concat(t.phone,"</td>\n            <td>").concat(t.date,"</td>\n            <td>").concat(t.time,"</td>\n        "),document.querySelector(".test").appendChild(e)})}),fetch("https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/rent.json").then(function(t){return t.json()}).then(function(t){t.forEach(function(t,n){var e=document.createElement("tr");e.innerHTML="\n            <td>".concat(n+1,"</td>\n            <td>").concat(t.name,"</td>\n            <td>").concat(t.phone,"</td>\n            <td>").concat(t.date,"</td>\n            <td>").concat(t.time,"</td>\n        "),document.querySelector(".rent").appendChild(e)})}),fetch("https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/power.json").then(function(t){return t.json()}).then(function(t){t.forEach(function(t,n){var e=document.createElement("tr");e.innerHTML="\n            <td>".concat(n+1,"</td>\n            <td>").concat(t.name,"</td>\n            <td>").concat(t.email,"</td>\n            <td>").concat(t.text,"</td>\n            \n        "),document.querySelector(".power").appendChild(e)})}),fetch("https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/question.json").then(function(t){return t.json()}).then(function(t){t.forEach(function(t,n){var e=document.createElement("tr");e.innerHTML="\n            <td>".concat(n+1,"</td>\n            <td>").concat(t.name,"</td>\n            <td>").concat(t.phone,"</td>\n            <td>").concat(t.text,"</td>\n            \n        "),document.querySelector(".question").appendChild(e)})});
+fetch('http://localhost:3000/call')
+.then((response) => response.json())
+.then((data) => {
+    data.forEach((item, i) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i+1}</td>
+            <td>${item.name}</td>
+            <td>${item.phone}</td>
+        `
+        document.querySelector('.call').appendChild(row); 
+  
+    });
+})
+
+fetch('http://localhost:3000/test')
+.then((response) => response.json())
+.then((data) => {
+    data.forEach((item, i) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i+1}</td>
+            <td>${item.name}</td>
+            <td>${item.phone}</td>
+            <td>${item.date}</td>
+            <td>${item.time}</td>
+        `
+        document.querySelector('.test').appendChild(row); 
+  
+    });
+});
+
+fetch('http://localhost:3000/rent')
+.then((response) => response.json())
+.then((data) => {
+    data.forEach((item, i) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i+1}</td>
+            <td>${item.name}</td>
+            <td>${item.phone}</td>
+            <td>${item.date}</td>
+            <td>${item.time}</td>
+        `
+        document.querySelector('.rent').appendChild(row); 
+  
+    });
+});
+
+fetch('http://localhost:3000/power')
+.then((response) => response.json())
+.then((data) => {
+    data.forEach((item, i) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i+1}</td>
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.text}</td>
+            
+        `
+        document.querySelector('.power').appendChild(row); 
+  
+    });
+});
+fetch('http://localhost:3000/question')
+.then((response) => response.json())
+.then((data) => {
+    data.forEach((item, i) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i+1}</td>
+            <td>${item.name}</td>
+            <td>${item.phone}</td>
+            <td>${item.text}</td>
+            
+        `
+        document.querySelector('.question').appendChild(row); 
+  
+    });
+})

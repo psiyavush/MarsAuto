@@ -1,0 +1,38 @@
+.footer {
+    padding: 100px 0;
+    background: #797C7D;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        & a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        & a:visited{
+            color: #E31E24;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 76px;
+    }
+    &__left {
+        display: flex;
+        column-gap: 169px;
+        align-items: center;
+    }
+    &__mars {
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}

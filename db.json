@@ -1,0 +1,734 @@
+{
+  "cars": [
+    {
+      "title": "2019 BMW i3",
+      "drive": "rvd",
+      "reserve": "350 км + ДВС",
+      "mileage": "8283",
+      "year": "2019",
+      "price": "1216600",
+      "image": "./src/images/car/bmw.png",
+      "id": 1
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rvd",
+      "reserve": "420 км",
+      "mileage": "24854",
+      "year": "2018",
+      "price": "1447600",
+      "image": "./src/images/car/tesla.png",
+      "id": 2
+    },
+    {
+      "title": "2016 Chevrolet Volt II",
+      "drive": "rvd",
+      "reserve": "85 км + ДВС",
+      "mileage": "41755",
+      "year": "2016",
+      "price": "1447600",
+      "image": "./src/images/car/chevrolet.png",
+      "id": 3
+    },
+    {
+      "title": "2013 Tesla Model S60",
+      "drive": "rwd",
+      "reserve": "320 км",
+      "mileage": "146022",
+      "year": "2013",
+      "price": "2040000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6063238230fde8073030051.png",
+      "id": 4
+    },
+    {
+      "title": "2014 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "130 км + ДВС",
+      "mileage": "70214",
+      "year": "2014",
+      "price": "1264000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cfbab38758620397601.png",
+      "id": 5
+    },
+    {
+      "title": "2014 Tesla Model S60",
+      "drive": "fwd",
+      "reserve": "320 км",
+      "mileage": "51822",
+      "year": "2014",
+      "price": "2200000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cca25b8c76150443221.png",
+      "id": 6
+    },
+    {
+      "title": "2016 Tesla Model X",
+      "drive": "awd",
+      "reserve": "467 км",
+      "mileage": "34796",
+      "year": "2016",
+      "price": "5440000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe25ad76e1623334675222.png",
+      "id": 7
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "380 км",
+      "mileage": "27340",
+      "year": "2017",
+      "price": "1672000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe258b54b8145639451091.png",
+      "id": 8
+    },
+    {
+      "title": "2017 Fiat 500e",
+      "drive": "fwd",
+      "reserve": "160 км",
+      "mileage": "31563",
+      "year": "2017",
+      "price": "1000000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe212ad204f73273943411.png",
+      "id": 9
+    },
+    {
+      "title": "2018 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "250 + 150 км",
+      "mileage": "4225",
+      "year": "2018",
+      "price": "2232000",
+      "image": "https://goroskoptop.ru/img/marsAuto/602a36c00d6691059193881.png",
+      "id": 10
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rwd",
+      "reserve": "420 км",
+      "mileage": "33864",
+      "year": "2018",
+      "price": "3016000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6023d6f76a93d4188767961.png",
+      "id": 11
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "420 км",
+      "mileage": "34610",
+      "year": "2017",
+      "price": "1832000",
+      "image": "https://goroskoptop.ru/img/marsAuto/603f5d9c275948891978541.png",
+      "id": 12
+    },
+    {
+      "title": "2014 Nissan Leaf",
+      "drive": "fwd",
+      "reserve": "120 км",
+      "mileage": "68350",
+      "year": "2014",
+      "price": "760000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe255e260b6e9498021041.png",
+      "id": 13
+    },
+    {
+      "title": "2015 BYD E6",
+      "drive": "rwd",
+      "reserve": "300 км",
+      "mileage": "80778",
+      "year": "2015",
+      "price": "680000",
+      "image": "https://goroskoptop.ru/img/marsAuto/60115d1464a329192335621.png",
+      "id": 14
+    },
+    {
+      "title": "2019 Audi e-Tron",
+      "drive": "awd",
+      "reserve": "446 км",
+      "mileage": "13000 миль",
+      "year": "2019",
+      "price": "1344000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5feae8707b4544990756411.png",
+      "id": 15
+    },
+    {
+      "title": "2019 BMW i3",
+      "drive": "rvd",
+      "reserve": "350 км + ДВС",
+      "mileage": "8283",
+      "year": "2019",
+      "price": "1216600",
+      "image": "./src/images/car/bmw.png",
+      "id": 16
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rvd",
+      "reserve": "420 км",
+      "mileage": "24854",
+      "year": "2018",
+      "price": "1447600",
+      "image": "./src/images/car/tesla.png",
+      "id": 17
+    },
+    {
+      "title": "2016 Chevrolet Volt II",
+      "drive": "rvd",
+      "reserve": "85 км + ДВС",
+      "mileage": "41755",
+      "year": "2016",
+      "price": "1447600",
+      "image": "./src/images/car/chevrolet.png",
+      "id": 18
+    },
+    {
+      "title": "2013 Tesla Model S60",
+      "drive": "rwd",
+      "reserve": "320 км",
+      "mileage": "146022",
+      "year": "2013",
+      "price": "2040000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6063238230fde8073030051.png",
+      "id": 19
+    },
+    {
+      "title": "2014 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "130 км + ДВС",
+      "mileage": "70214",
+      "year": "2014",
+      "price": "1264000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cfbab38758620397601.png",
+      "id": 20
+    },
+    {
+      "title": "2014 Tesla Model S60",
+      "drive": "fwd",
+      "reserve": "320 км",
+      "mileage": "51822",
+      "year": "2014",
+      "price": "2200000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cca25b8c76150443221.png",
+      "id": 21
+    },
+    {
+      "title": "2016 Tesla Model X",
+      "drive": "awd",
+      "reserve": "467 км",
+      "mileage": "34796",
+      "year": "2016",
+      "price": "5440000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe25ad76e1623334675222.png",
+      "id": 22
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "380 км",
+      "mileage": "27340",
+      "year": "2017",
+      "price": "1672000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe258b54b8145639451091.png",
+      "id": 23
+    },
+    {
+      "title": "2017 Fiat 500e",
+      "drive": "fwd",
+      "reserve": "160 км",
+      "mileage": "31563",
+      "year": "2017",
+      "price": "1000000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe212ad204f73273943411.png",
+      "id": 24
+    },
+    {
+      "title": "2018 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "250 + 150 км",
+      "mileage": "4225",
+      "year": "2018",
+      "price": "2232000",
+      "image": "https://goroskoptop.ru/img/marsAuto/602a36c00d6691059193881.png",
+      "id": 25
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rwd",
+      "reserve": "420 км",
+      "mileage": "33864",
+      "year": "2018",
+      "price": "3016000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6023d6f76a93d4188767961.png",
+      "id": 26
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "420 км",
+      "mileage": "34610",
+      "year": "2017",
+      "price": "1832000",
+      "image": "https://goroskoptop.ru/img/marsAuto/603f5d9c275948891978541.png",
+      "id": 27
+    },
+    {
+      "title": "2014 Nissan Leaf",
+      "drive": "fwd",
+      "reserve": "120 км",
+      "mileage": "68350",
+      "year": "2014",
+      "price": "760000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe255e260b6e9498021041.png",
+      "id": 28
+    },
+    {
+      "title": "2015 BYD E6",
+      "drive": "rwd",
+      "reserve": "300 км",
+      "mileage": "80778",
+      "year": "2015",
+      "price": "680000",
+      "image": "https://goroskoptop.ru/img/marsAuto/60115d1464a329192335621.png",
+      "id": 29
+    },
+    {
+      "title": "2019 Audi e-Tron",
+      "drive": "awd",
+      "reserve": "446 км",
+      "mileage": "13000 миль",
+      "year": "2019",
+      "price": "1344000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6063238230fde8073030051.png",
+      "id": 30
+    },
+    {
+      "title": "2019 BMW i3",
+      "drive": "rvd",
+      "reserve": "350 км + ДВС",
+      "mileage": "8283",
+      "year": "2019",
+      "price": "1216600",
+      "image": "./src/images/car/bmw.png",
+      "id": 31
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rvd",
+      "reserve": "420 км",
+      "mileage": "24854",
+      "year": "2018",
+      "price": "1447600",
+      "image": "./src/images/car/tesla.png",
+      "id": 32
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "420 км",
+      "mileage": "34610",
+      "year": "2017",
+      "price": "1832000",
+      "image": "https://goroskoptop.ru/img/marsAuto/603f5d9c275948891978541.png",
+      "id": 37
+    },
+    {
+      "title": "2016 Chevrolet Volt II",
+      "drive": "rvd",
+      "reserve": "85 км + ДВС",
+      "mileage": "41755",
+      "year": "2016",
+      "price": "1447600",
+      "image": "./src/images/car/chevrolet.png",
+      "id": 33
+    },
+    {
+      "title": "2019 Audi e-Tron",
+      "drive": "awd",
+      "reserve": "446 км",
+      "mileage": "13000 миль",
+      "year": "2019",
+      "price": "1344000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6063238230fde8073030051.png",
+      "id": 34
+    },
+    {
+      "title": "2015 BYD E6",
+      "drive": "rwd",
+      "reserve": "300 км",
+      "mileage": "80778",
+      "year": "2015",
+      "price": "680000",
+      "image": "https://goroskoptop.ru/img/marsAuto/60115d1464a329192335621.png",
+      "id": 35
+    },
+    {
+      "title": "2014 Nissan Leaf",
+      "drive": "fwd",
+      "reserve": "120 км",
+      "mileage": "68350",
+      "year": "2014",
+      "price": "760000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe255e260b6e9498021041.png",
+      "id": 36
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rwd",
+      "reserve": "420 км",
+      "mileage": "33864",
+      "year": "2018",
+      "price": "3016000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6023d6f76a93d4188767961.png",
+      "id": 38
+    },
+    {
+      "title": "2018 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "250 + 150 км",
+      "mileage": "4225",
+      "year": "2018",
+      "price": "2232000",
+      "image": "https://goroskoptop.ru/img/marsAuto/602a36c00d6691059193881.png",
+      "id": 39
+    },
+    {
+      "title": "2017 Fiat 500e",
+      "drive": "fwd",
+      "reserve": "160 км",
+      "mileage": "31563",
+      "year": "2017",
+      "price": "1000000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe212ad204f73273943411.png",
+      "id": 40
+    },
+    {
+      "title": "2017 Chevrolet Bolt",
+      "drive": "fwd",
+      "reserve": "380 км",
+      "mileage": "27340",
+      "year": "2017",
+      "price": "1672000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe258b54b8145639451091.png",
+      "id": 41
+    },
+    {
+      "title": "2016 Tesla Model X",
+      "drive": "awd",
+      "reserve": "467 км",
+      "mileage": "34796",
+      "year": "2016",
+      "price": "5440000",
+      "image": "https://goroskoptop.ru/img/marsAuto/5fe25ad76e1623334675222.png",
+      "id": 42
+    },
+    {
+      "title": "2014 Tesla Model S60",
+      "drive": "fwd",
+      "reserve": "320 км",
+      "mileage": "51822",
+      "year": "2014",
+      "price": "2200000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cca25b8c76150443221.png",
+      "id": 43
+    },
+    {
+      "title": "2014 BMW i3 REX",
+      "drive": "rwd",
+      "reserve": "130 км + ДВС",
+      "mileage": "70214",
+      "year": "2014",
+      "price": "1264000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6062cfbab38758620397601.png",
+      "id": 44
+    },
+    {
+      "title": "2013 Tesla Model S60",
+      "drive": "rwd",
+      "reserve": "320 км",
+      "mileage": "146022",
+      "year": "2013",
+      "price": "2040000",
+      "image": "https://goroskoptop.ru/img/marsAuto/6063238230fde8073030051.png",
+      "id": 45
+    },
+    {
+      "title": "2016 Chevrolet Volt II",
+      "drive": "rvd",
+      "reserve": "85 км + ДВС",
+      "mileage": "41755",
+      "year": "2016",
+      "price": "1447600",
+      "image": "./src/images/car/chevrolet.png",
+      "id": 46
+    },
+    {
+      "title": "2018 Tesla Model 3 Mid",
+      "drive": "rvd",
+      "reserve": "420 км",
+      "mileage": "24854",
+      "year": "2018",
+      "price": "1447600",
+      "image": "./src/images/car/tesla.png",
+      "id": 47
+    },
+    {
+      "title": "2019 BMW i3",
+      "drive": "rvd",
+      "reserve": "350 км + ДВС",
+      "mileage": "8283",
+      "year": "2019",
+      "price": "1216600",
+      "image": "./src/images/car/bmw.png",
+      "id": 48
+    }
+  ],
+  "info": [
+    {
+      "id": 1,
+      "images": "../../src/images/useful/chevrolet.png",
+      "title": "Chevrolet Bolt 2021: только хорошие новости! Обновился, снизил цену, обзавелся новой версией и получил автопилот второго уровня.",
+      "description": "В Беларуси Chevrolet Bolt набирает популярность, ведь он является одним из самых доступных подержанных электрокаров с большим пробегом на одной зарядке. А на американском рынке уже появилась обновленная версия. Причем не одна: обновленный Chevrolet Bolt EV обзавелся “братом” в виде кроссоверной версии Chevrolet Bolt EUV."
+    },
+    {
+      "id": 2,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 3,
+      "images": "../../src/images/useful/mustang.png",
+      "title": "Что мы знаем об электрическом Ford Mustang?",
+      "description": "Ходят слухи, что Ford Mustang Mach-E выйдет сразу же после окончания карантина. В сегодняшнем выпуске мы расскажем о всём, что известно о новом 'Мустанге' от компании Ford."
+    },
+    {
+      "id": 4,
+      "images": "../../src/images/useful/renault-zoe-2019.png",
+      "title": "Обзор нового Renault Zoe 2021. Хорош, но есть к чему придраться.",
+      "description": "Renault Zoe - небольшой электромобиль с достойной мощностью и впечатляющим запасом хода. Салон у этой модели далеко не самый просторный среди конкурентов, да и некоторые материалы выглядят немного дешево. А в остальных преимуществах и недостатках Renault Zoe предлагаем разобраться в нашем обзоре."
+    },
+    {
+      "id": 5,
+      "images": "../../src/images/useful/deba.png",
+      "title": "Что умеет официальное приложение и зачем для его использования привязывать авто к аккаунту Tesla?",
+      "description": "Как известно, Tesla внедряет в свои авто самые современные технологии. Как пример – единственный по истине умный и самостоятельный автопилот. Также, компания Tesla выпустила официальное мобильное приложение для управления электромобилем со смартфона. О том, как им пользоваться мы расскажем в этой статье."
+    },
+    {
+      "id": 6,
+      "images": "../../src/images/useful/chevrolet.png",
+      "title": "Chevrolet Bolt 2021: только хорошие новости! Обновился, снизил цену, обзавелся новой версией и получил автопилот второго уровня.",
+      "description": "В Беларуси Chevrolet Bolt набирает популярность, ведь он является одним из самых доступных подержанных электрокаров с большим пробегом на одной зарядке. А на американском рынке уже появилась обновленная версия. Причем не одна: обновленный Chevrolet Bolt EV обзавелся “братом” в виде кроссоверной версии Chevrolet Bolt EUV."
+    },
+    {
+      "id": 7,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 8,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 9,
+      "images": "../../src/images/useful/mustang.png",
+      "title": "Что мы знаем об электрическом Ford Mustang?",
+      "description": "Ходят слухи, что Ford Mustang Mach-E выйдет сразу же после окончания карантина. В сегодняшнем выпуске мы расскажем о всём, что известно о новом 'Мустанге' от компании Ford."
+    },
+    {
+      "id": 10,
+      "images": "../../src/images/useful/renault-zoe-2019.png",
+      "title": "Обзор нового Renault Zoe 2021. Хорош, но есть к чему придраться.",
+      "description": "Renault Zoe - небольшой электромобиль с достойной мощностью и впечатляющим запасом хода. Салон у этой модели далеко не самый просторный среди конкурентов, да и некоторые материалы выглядят немного дешево. А в остальных преимуществах и недостатках Renault Zoe предлагаем разобраться в нашем обзоре."
+    },
+    {
+      "id": 11,
+      "images": "../../src/images/useful/deba.png",
+      "title": "Что умеет официальное приложение и зачем для его использования привязывать авто к аккаунту Tesla?",
+      "description": "Как известно, Tesla внедряет в свои авто самые современные технологии. Как пример – единственный по истине умный и самостоятельный автопилот. Также, компания Tesla выпустила официальное мобильное приложение для управления электромобилем со смартфона. О том, как им пользоваться мы расскажем в этой статье."
+    },
+    {
+      "id": 12,
+      "images": "../../src/images/useful/deba.png",
+      "title": "Что умеет официальное приложение и зачем для его использования привязывать авто к аккаунту Tesla?",
+      "description": "Как известно, Tesla внедряет в свои авто самые современные технологии. Как пример – единственный по истине умный и самостоятельный автопилот. Также, компания Tesla выпустила официальное мобильное приложение для управления электромобилем со смартфона. О том, как им пользоваться мы расскажем в этой статье."
+    },
+    {
+      "id": 13,
+      "images": "../../src/images/useful/renault-zoe-2019.png",
+      "title": "Обзор нового Renault Zoe 2021. Хорош, но есть к чему придраться.",
+      "description": "Renault Zoe - небольшой электромобиль с достойной мощностью и впечатляющим запасом хода. Салон у этой модели далеко не самый просторный среди конкурентов, да и некоторые материалы выглядят немного дешево. А в остальных преимуществах и недостатках Renault Zoe предлагаем разобраться в нашем обзоре."
+    },
+    {
+      "id": 14,
+      "images": "../../src/images/useful/mustang.png",
+      "title": "Что мы знаем об электрическом Ford Mustang?",
+      "description": "Ходят слухи, что Ford Mustang Mach-E выйдет сразу же после окончания карантина. В сегодняшнем выпуске мы расскажем о всём, что известно о новом 'Мустанге' от компании Ford."
+    },
+    {
+      "id": 15,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 16,
+      "images": "../../src/images/useful/chevrolet.png",
+      "title": "Chevrolet Bolt 2021: только хорошие новости! Обновился, снизил цену, обзавелся новой версией и получил автопилот второго уровня.",
+      "description": "В Беларуси Chevrolet Bolt набирает популярность, ведь он является одним из самых доступных подержанных электрокаров с большим пробегом на одной зарядке. А на американском рынке уже появилась обновленная версия. Причем не одна: обновленный Chevrolet Bolt EV обзавелся “братом” в виде кроссоверной версии Chevrolet Bolt EUV."
+    },
+    {
+      "id": 17,
+      "images": "../../src/images/useful/chevrolet.png",
+      "title": "Chevrolet Bolt 2021: только хорошие новости! Обновился, снизил цену, обзавелся новой версией и получил автопилот второго уровня.",
+      "description": "В Беларуси Chevrolet Bolt набирает популярность, ведь он является одним из самых доступных подержанных электрокаров с большим пробегом на одной зарядке. А на американском рынке уже появилась обновленная версия. Причем не одна: обновленный Chevrolet Bolt EV обзавелся “братом” в виде кроссоверной версии Chevrolet Bolt EUV."
+    },
+    {
+      "id": 18,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 19,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 20,
+      "images": "../../src/images/useful/mustang.png",
+      "title": "Что мы знаем об электрическом Ford Mustang?",
+      "description": "Ходят слухи, что Ford Mustang Mach-E выйдет сразу же после окончания карантина. В сегодняшнем выпуске мы расскажем о всём, что известно о новом 'Мустанге' от компании Ford."
+    },
+    {
+      "id": 21,
+      "images": "../../src/images/useful/renault-zoe-2019.png",
+      "title": "Обзор нового Renault Zoe 2021. Хорош, но есть к чему придраться.",
+      "description": "Renault Zoe - небольшой электромобиль с достойной мощностью и впечатляющим запасом хода. Салон у этой модели далеко не самый просторный среди конкурентов, да и некоторые материалы выглядят немного дешево. А в остальных преимуществах и недостатках Renault Zoe предлагаем разобраться в нашем обзоре."
+    },
+    {
+      "id": 22,
+      "images": "../../src/images/useful/deba.png",
+      "title": "Что умеет официальное приложение и зачем для его использования привязывать авто к аккаунту Tesla?",
+      "description": "Как известно, Tesla внедряет в свои авто самые современные технологии. Как пример – единственный по истине умный и самостоятельный автопилот. Также, компания Tesla выпустила официальное мобильное приложение для управления электромобилем со смартфона. О том, как им пользоваться мы расскажем в этой статье."
+    },
+    {
+      "id": 23,
+      "images": "../../src/images/useful/deba.png",
+      "title": "Что умеет официальное приложение и зачем для его использования привязывать авто к аккаунту Tesla?",
+      "description": "Как известно, Tesla внедряет в свои авто самые современные технологии. Как пример – единственный по истине умный и самостоятельный автопилот. Также, компания Tesla выпустила официальное мобильное приложение для управления электромобилем со смартфона. О том, как им пользоваться мы расскажем в этой статье."
+    },
+    {
+      "id": 24,
+      "images": "../../src/images/useful/renault-zoe-2019.png",
+      "title": "Обзор нового Renault Zoe 2021. Хорош, но есть к чему придраться.",
+      "description": "Renault Zoe - небольшой электромобиль с достойной мощностью и впечатляющим запасом хода. Салон у этой модели далеко не самый просторный среди конкурентов, да и некоторые материалы выглядят немного дешево. А в остальных преимуществах и недостатках Renault Zoe предлагаем разобраться в нашем обзоре."
+    },
+    {
+      "id": 25,
+      "images": "../../src/images/useful/mustang.png",
+      "title": "Что мы знаем об электрическом Ford Mustang?",
+      "description": "Ходят слухи, что Ford Mustang Mach-E выйдет сразу же после окончания карантина. В сегодняшнем выпуске мы расскажем о всём, что известно о новом 'Мустанге' от компании Ford."
+    },
+    {
+      "id": 26,
+      "images": "../../src/images/useful/model.png",
+      "title": "Обновленные Model S и Model X: все модификации, характеристики, цены.",
+      "description": "Лифтбек Tesla Model S выпускается с 2012 года - и все это время он оставался неизменным. Но сегодня компания просто ошарашила поклонников новостями о кардинальном обновлении модельного ряда. Представлены новые модификации Tesla Model S и Tesla Model X, а также “горячие” версии Tesla Model S Plaid и Tesla Model S Plaid+."
+    },
+    {
+      "id": 27,
+      "images": "../../src/images/useful/chevrolet.png",
+      "title": "Chevrolet Bolt 2021: только хорошие новости! Обновился, снизил цену, обзавелся новой версией и получил автопилот второго уровня.",
+      "description": "В Беларуси Chevrolet Bolt набирает популярность, ведь он является одним из самых доступных подержанных электрокаров с большим пробегом на одной зарядке. А на американском рынке уже появилась обновленная версия. Причем не одна: обновленный Chevrolet Bolt EV обзавелся “братом” в виде кроссоверной версии Chevrolet Bolt EUV."
+    }
+  ],
+  "call": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "phone": "+79818212681"
+    },
+    {
+      "id": 1,
+      "name": "Андрей",
+      "phone": "+79818212682"
+    },
+    {
+      "id": 1,
+      "name": "Марина",
+      "phone": "+79818212683"
+    }
+  ],
+  "test": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "phone": "+79939812681",
+      "date": "12.05.2023",
+      "time": "10:00"
+    },
+    {
+      "id": 2,
+      "name": "Екатерина",
+      "phone": "+79939812682",
+      "date": "13.05.2023",
+      "time": "11:00"
+    },
+    {
+      "id": 3,
+      "name": "Георгий",
+      "phone": "+79939812683",
+      "date": "13.05.2023",
+      "time": "15:00"
+    },
+    {
+      "id": 4,
+      "name": "Марьяна",
+      "phone": "+79939812684",
+      "date": "16.05.2023",
+      "time": "12:00"
+    }
+    
+  ],
+  "rent": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "phone": "+79818212681",
+      "date": "2023-05-20",
+      "time": "10:00"
+    },
+    {
+      "id": 2,
+      "name": "Андрей",
+      "phone": "+79818212682",
+      "date": "2023-05-15",
+      "time": "11:00"
+    }
+  ],
+  "power": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "email": "mail@mail.com",
+      "text": "ул. Шкапина"
+    },
+    {
+      "name": "Tom Cruze",
+      "email": "gruze@mail.ru",
+      "text": "Планерная 9",
+      "id": 2
+    }
+  ],
+  "question": [
+    {
+      "id": 1,
+      "name": "Семен",
+      "phone": "+79818212681",
+      "text": "Какой максимальный срок аренды автомобиля?"
+    }
+  ]
+}
