@@ -4,8 +4,9 @@ let addBtn = document.querySelector('.useful-info-top-btn');
 let addForm = document.querySelector('.catalog__form');
 
 const getAllInfo = (number) => {
-    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/info.json')
-    .then((response)=> response.json())
+    return Promise.resolve(JSON.parse(localStorage.getItem('info')))
+    // fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/info.json')
+    // .then((response)=> response.json())
     .then((info) => {
         info.slice().reverse().filter((item, i)=> i > number * 5 - 6 && i < number * 5).forEach((item, i)=>{
         infoContent.innerHTML += `
@@ -113,11 +114,19 @@ const getAllInfo = (number) => {
         // Удаление информации
         deleteBtn.forEach((btn)=>{
             btn.addEventListener('click', ()=> {
-                fetch(`http://localhost:3000/info/${btn.dataset.id}`, {
-                    method: 'DELETE'
-                }).then(()=>{
-                    location.reload()
-                })
+                let id = btn.dataset.id;
+                info = info.filter(x => x.id != id);
+                info.forEach((card, index) => {
+                    card.id = index + 1;
+                  });
+                localStorage.setItem('info', JSON.stringify(info));
+                
+                location.reload()
+                // fetch(`http://localhost:3000/info/${btn.dataset.id}`, {
+                //     method: 'DELETE'
+                // }).then(()=>{
+                //     location.reload()
+                // })
             })
         })
     })
@@ -129,45 +138,71 @@ addForm.addEventListener('submit', (e)=>{
     // предотвращаем обновление формы
     e.preventDefault();
     // проверяем условие в кнопке отправки формы, если текс - Изменить, то используем PATCH запрос
+    info = JSON.parse(localStorage.getItem('info'))
     if(formBtn.textContent === 'Изменить'){
-        fetch(`http://localhost:3000/info/${e.target[3].value}`, {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json; charset=UTF-8"
-            },
-            method: 'PATCH',
-            body: JSON.stringify({
+        // Демонстрационная версия
+        let id = e.target[3].value;
+        let index = info.findIndex(x => x.id == id);
+        if (index > -1) {
+            info[index] = {
                 "title": e.target[0].value,
                 "images": e.target[1].value,
-                "description": e.target[2].value
-                            
-            })
-        }).then(( )=> {
+                "description": e.target[2].value,
+                "id": e.target[3].value,
+            };
+            localStorage.setItem('info', JSON.stringify(info));
             overlay.style.display = 'none'
             location.reload()
-        })
+        }
+
+        // fetch(`http://localhost:3000/info/${e.target[3].value}`, {
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': "application/json; charset=UTF-8"
+        //     },
+        //     method: 'PATCH',
+        //     body: JSON.stringify({
+        //         "title": e.target[0].value,
+        //         "images": e.target[1].value,
+        //         "description": e.target[2].value
+                            
+        //     })
+        // }).then(( )=> {
+        //     overlay.style.display = 'none'
+        //     location.reload()
+        // })
     } else {
+        let newCard = {
+            "title": e.target[0].value,
+            "images": e.target[1].value,
+            "description": e.target[2].value,
+            "id": info.length + 1,
+        };
+        info.push(newCard);
+        localStorage.setItem('info', JSON.stringify(info));
+        overlay.style.display = 'none'
+        location.reload()
+
         // иначе, POST запрос
-        fetch('http://localhost:3000/info', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json; charset=UTF-8"
-            },
-            body: JSON.stringify({
-                "title": e.target[0].value,
-                "images": e.target[1].value,
-                "description": e.target[2].value
+        // fetch('http://localhost:3000/info', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': "application/json; charset=UTF-8"
+        //     },
+        //     body: JSON.stringify({
+        //         "title": e.target[0].value,
+        //         "images": e.target[1].value,
+        //         "description": e.target[2].value
                             
-            })
-        }).then(()=>{
-            overlay.style.display = 'none'
-            location.reload()
+        //     })
+        // }).then(()=>{
+        //     overlay.style.display = 'none'
+        //     location.reload()
         
-        }).catch((err)=> console.log(err));
+        // }).catch((err)=> console.log(err));
     }
         
-   
 });
 
 // если клик был по кнопке Добавить информацию, то текст в кнопке отправки формы меняется на Добавить

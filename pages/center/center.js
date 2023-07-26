@@ -21,26 +21,45 @@ questionBtn.addEventListener('click', (e) => {
 
 addFormCenter.addEventListener('submit', (e) => {
     e.preventDefault();
-    fetch('http://localhost:3000/question', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+
+    // отправка данных - Задать вопрос (демонстрационная версия)
+    let question = JSON.parse(localStorage.getItem('question'))
+    let newQuestion = {
+        "id": question.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value,
+        "text": e.target[2].value,       
+    }
+    question.push(newQuestion);
+    localStorage.setItem("question", JSON.stringify(question))
+    overlayCenter.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+
+
+    // fetch('http://localhost:3000/question', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
-                "text": e.target[2].value,
-            })
-    }).then(()=>{
-        overlayCenter.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
-    })
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
+    //             "text": e.target[2].value,
+    //         })
+    // }).then(()=>{
+    //     overlayCenter.style.display = 'none';
+    //     sent.style.display = 'flex';
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     e.target.reset()
+    // })
 })
 
 overlayCenter.addEventListener('click', (e)=> {

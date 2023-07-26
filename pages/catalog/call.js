@@ -11,28 +11,45 @@ callBtn.forEach((btn)=> {
 
 addFormCall.addEventListener('submit', (e)=> {
     e.preventDefault();
+
+    // отправка данных - Заказать звонок (демонстрационная версия)
+    let call = JSON.parse(localStorage.getItem('call'))
+  
+    let newCall = {
+        "id": call.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value        
+    }
+    call.push(newCall);
+    localStorage.setItem("call", JSON.stringify(call))
+    overlayCall.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
     
-    fetch('http://localhost:3000/call', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // fetch('http://localhost:3000/call', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
                 
-            })
-    }).then(()=>{
-        overlayCall.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
+    //         })
+    // }).then(()=>{
+    //     overlayCall.style.display = 'none';
+    //     sent.style.display = 'flex';
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     e.target.reset()
         
-    })
+    // })
     
 })
 

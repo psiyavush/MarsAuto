@@ -7,8 +7,10 @@ const getAllCars = () => {
     .then((response) => response.json())
     .then((cars) => {
         // Добавление данных в хранилище (демонстрационная версия)
-        localStorage.setItem("cars", JSON.stringify(cars));
-        
+        if (localStorage.getItem('cars') === null ){
+            localStorage.setItem("cars", JSON.stringify(cars));
+        }
+                
         cars.filter((item, i) => i<3).forEach((item) => {
         carContent.innerHTML += `
         <div class="car__content-card">
@@ -87,3 +89,24 @@ const getAllCars = () => {
 
 // Вызываем функцию
 getAllCars()
+
+// Добавление в хранилище полезной информации (для демонстрационной версии)
+if (localStorage.getItem('info') === null ){
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/info.json')
+    .then((response)=> response.json())
+    .then((info) => localStorage.setItem("info", JSON.stringify(info)))
+}
+
+// Добавление данных power в хранилище (демонстрационная версия)
+if (localStorage.getItem('power') === null){
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/power.json')
+    .then((response) => response.json())
+    .then((power) => localStorage.setItem("power", JSON.stringify(power)))
+}
+
+// Добавление данных question в хранилище (демонстрационная версия)
+if (localStorage.getItem('question') === null){
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/question.json')
+    .then((response) => response.json())
+    .then((question) => localStorage.setItem("question", JSON.stringify(question)))
+}

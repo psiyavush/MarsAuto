@@ -11,34 +11,59 @@ callBtn.forEach((btn)=> {
     });
 })
 
+// Добавление данных в хранилище (демонстрационная версия)
+if (localStorage.getItem('call') === null ) {
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/call.json')
+    .then((response) => response.json())
+    .then((call) => localStorage.setItem("call", JSON.stringify(call)))
+}
+
 // при нажатии на кнопку "Отправить" - отправляем данные в базу данных
 addForm.addEventListener('submit', (e)=> {
     e.preventDefault();
+
+    // отправка данных - Заказать звонок (демонстрационная версия)
+    let call = JSON.parse(localStorage.getItem('call'))
+  
+    let newCall = {
+        "id": call.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value        
+    }
+    call.push(newCall);
+    localStorage.setItem("call", JSON.stringify(call))
+    overlayCall.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+
     
-    fetch('http://localhost:3000/call', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // fetch('http://localhost:3000/call', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
                 
-            })
-    }).then(()=>{
-        // окно снова невидимое
-        overlayCall.style.display = 'none';
-        // окно сообщение отправлено станет видимым
-        sent.style.display = 'flex';
-        // через 4 секунды снова невидимым
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        // сбрасываем значение всех полей формы
-        e.target.reset()
-    })
+    //         })
+    // }).then(()=>{
+    //     // окно снова невидимое
+    //     overlayCall.style.display = 'none';
+    //     // окно сообщение отправлено станет видимым
+    //     sent.style.display = 'flex';
+    //     // через 4 секунды снова невидимым
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     // сбрасываем значение всех полей формы
+    //     e.target.reset()
+    // })
     
 })
 
@@ -113,31 +138,58 @@ testBtn.addEventListener('click', ()=> {
     overlayTest.style.display = 'flex';
 });
 
+// Добавление данных в хранилище (демонстрационная версия)
+if (localStorage.getItem('test') === null ) {
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/test.json')
+    .then((response) => response.json())
+    .then((test) => localStorage.setItem("test", JSON.stringify(test)))
+}
+
 addFormTest.addEventListener('submit', (e)=> {
     e.preventDefault();
 
-    fetch('http://localhost:3000/test', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // отправка данных - Запись на тест-драйв (демонстрационная версия)
+    let test = JSON.parse(localStorage.getItem('test'))
+  
+    let newTest = {
+        "id": test.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value,
+        "date": testData.options[testData.selectedIndex].text,
+        "time": testTime.options[testTime.selectedIndex].text   
+    }
+    test.push(newTest);
+    localStorage.setItem("test", JSON.stringify(test))
+    overlayTest.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+    console.log(JSON.parse(localStorage.getItem('test')))
+
+    // fetch('http://localhost:3000/test', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
-                "date": testData.options[testData.selectedIndex].text,
-                "time": testTime.options[testTime.selectedIndex].text
-            })
-    }).then(()=>{
-        overlayTest.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
+    //             "date": testData.options[testData.selectedIndex].text,
+    //             "time": testTime.options[testTime.selectedIndex].text
+    //         })
+    // }).then(()=>{
+    //     overlayTest.style.display = 'none';
+    //     sent.style.display = 'flex';
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     e.target.reset()
                 
-    })
+    // })
         
 })
 
@@ -156,31 +208,57 @@ rentBtn.addEventListener('click', ()=> {
     overlayRent.style.display = 'flex';
 });
 
+// Добавление данных в хранилище (демонстрационная версия)
+if (localStorage.getItem('rent') === null ){
+    fetch('https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/rent.json')
+    .then((response) => response.json())
+    .then((rent) => localStorage.setItem("rent", JSON.stringify(rent)))
+}
+
 addFormRent.addEventListener('submit', (e)=> {
     e.preventDefault();
 
-    fetch('http://localhost:3000/rent', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // отправка данных - Аренда электромобиля (демонстрационная версия)
+    let rent = JSON.parse(localStorage.getItem('rent'))
+  
+    let newRent = {
+        "id": rent.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value,
+        "date": e.target[2].value,
+        "time": e.target[3].value      
+    }
+    rent.push(newRent);
+    localStorage.setItem("rent", JSON.stringify(rent))
+    overlayRent.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+
+    // fetch('http://localhost:3000/rent', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
-                "date": e.target[2].value,
-                "time": e.target[3].value
-            })
-    }).then(()=>{
-        overlayRent.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
+    //             "date": e.target[2].value,
+    //             "time": e.target[3].value
+    //         })
+    // }).then(()=>{
+        // overlayRent.style.display = 'none';
+        // sent.style.display = 'flex';
+        // setTimeout(function () {
+        //     sent.style.display = 'none';
+        // }, 4000);
+        // e.target.reset()
                 
-    })
+    // })
         
 })
 

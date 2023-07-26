@@ -12,9 +12,11 @@ function getUrlParam() {
 const getId = getUrlParam();
 
 
-fetch(`https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars/${getId-1}.json`)
-.then((response) => response.json())
-.then((item) => {
+// fetch(`https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars/${getId-1}.json`)
+// .then((response) => response.json())
+// .then((item) => {
+    // взятие данных из localStorage (демонстрационная версия)
+    item = JSON.parse(localStorage.getItem('cars'))[getId-1]
     article.innerHTML = `
     <div class="article__main">
     <img src="${item.image.startsWith('https') ? item.image : "../../"+item.image}" alt="${item.title}" width="657px" height="468px">
@@ -68,7 +70,7 @@ fetch(`https://mars-auto-default-rtdb.europe-west1.firebasedatabase.app/cars/${g
 </div>
 `
     headTitle.textContent = `${item.title} | MarsAuto`;
-});
+// });
 
 // Модальное окно "Заказать звонок" и отправка в базу данных
 let overlayCall = document.querySelector('.overlay__call')
@@ -87,30 +89,47 @@ callBtn.forEach((btn)=> {
 addForm.addEventListener('submit', (e)=> {
     e.preventDefault();
     
-    fetch('http://localhost:3000/call', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // отправка данных - Заказать звонок (демонстрационная версия)
+    let call = JSON.parse(localStorage.getItem('call'))
+  
+    let newCall = {
+        "id": call.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value        
+    }
+    call.push(newCall);
+    localStorage.setItem("call", JSON.stringify(call))
+    overlayCall.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+
+    // fetch('http://localhost:3000/call', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
                 
-            })
-    }).then(()=>{
-        // окно снова невидимое
-        overlayCall.style.display = 'none';
-        // окно сообщение отправлено станет видимым
-        sent.style.display = 'flex';
-        // через 4 секунды снова невидимым
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        // сбрасываем значение всех полей формы
-        e.target.reset()
-    })
+    //         })
+    // }).then(()=>{
+    //     // окно снова невидимое
+    //     overlayCall.style.display = 'none';
+    //     // окно сообщение отправлено станет видимым
+    //     sent.style.display = 'flex';
+    //     // через 4 секунды снова невидимым
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     // сбрасываем значение всех полей формы
+    //     e.target.reset()
+    // })
     
 })
 
@@ -188,28 +207,48 @@ testBtn.addEventListener('click', ()=> {
 addFormTest.addEventListener('submit', (e)=> {
     e.preventDefault();
 
-    fetch('http://localhost:3000/test', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // отправка данных - Запись на тест-драйв (демонстрационная версия)
+    let test = JSON.parse(localStorage.getItem('test'))
+  
+    let newTest = {
+        "id": test.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value,
+        "date": testData.options[testData.selectedIndex].text,
+        "time": testTime.options[testTime.selectedIndex].text   
+    }
+    test.push(newTest);
+    localStorage.setItem("test", JSON.stringify(test))
+    overlayTest.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+    console.log(JSON.parse(localStorage.getItem('test')))
+
+    // fetch('http://localhost:3000/test', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
-                "date": testData.options[testData.selectedIndex].text,
-                "time": testTime.options[testTime.selectedIndex].text
-            })
-    }).then(()=>{
-        overlayTest.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
+    //             "date": testData.options[testData.selectedIndex].text,
+    //             "time": testTime.options[testTime.selectedIndex].text
+    //         })
+    // }).then(()=>{
+    //     overlayTest.style.display = 'none';
+    //     sent.style.display = 'flex';
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     e.target.reset()
                 
-    })
+    // })
         
 })
 
@@ -231,28 +270,47 @@ rentBtn.addEventListener('click', ()=> {
 addFormRent.addEventListener('submit', (e)=> {
     e.preventDefault();
 
-    fetch('http://localhost:3000/rent', {
-        method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': "application/json"
-            },
+    // отправка данных - Аренда электромобиля (демонстрационная версия)
+    let rent = JSON.parse(localStorage.getItem('rent'))
+  
+    let newRent = {
+        "id": rent.at(-1).id + 1,
+        "name": e.target[0].value,
+        "phone": e.target[1].value,
+        "date": e.target[2].value,
+        "time": e.target[3].value      
+    }
+    rent.push(newRent);
+    localStorage.setItem("rent", JSON.stringify(rent))
+    overlayRent.style.display = 'none';
+    sent.style.display = 'flex';
+    setTimeout(function () {
+        sent.style.display = 'none';
+    }, 3000);
+    e.target.reset()
+
+    // fetch('http://localhost:3000/rent', {
+    //     method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': "application/json"
+    //         },
             
-            body: JSON.stringify({
-                "name": e.target[0].value,
-                "phone": e.target[1].value,
-                "date": e.target[2].value,
-                "time": e.target[3].value
-            })
-    }).then(()=>{
-        overlayRent.style.display = 'none';
-        sent.style.display = 'flex';
-        setTimeout(function () {
-            sent.style.display = 'none';
-        }, 4000);
-        e.target.reset()
+    //         body: JSON.stringify({
+    //             "name": e.target[0].value,
+    //             "phone": e.target[1].value,
+    //             "date": e.target[2].value,
+    //             "time": e.target[3].value
+    //         })
+    // }).then(()=>{
+    //     overlayRent.style.display = 'none';
+    //     sent.style.display = 'flex';
+    //     setTimeout(function () {
+    //         sent.style.display = 'none';
+    //     }, 4000);
+    //     e.target.reset()
                 
-    })
+    // })
         
 })
 
